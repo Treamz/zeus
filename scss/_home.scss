@@ -1,0 +1,772 @@
+/* start - first block with animation logo */
+.h-block {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#animate_logo {
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    top: 10vh;
+}
+.logo-animation-block__text {
+    position: absolute;
+    bottom: 100px;
+    color: #fff;
+    text-align: center;
+}
+/*icon scroll to bottom*/
+.logo-animation-block {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    transition: background-color .2s linear;
+}
+.animate-bgColor {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  background-color: #fff;
+}
+
+.logo-animation-block:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: 30px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(-45deg) translateY(0) translateX(0);
+    animation: scrollIcon 1.2s linear infinite;
+}
+.logo-animation-block--glitch::before {
+    content: "";
+    display: block;
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: -40vh;
+    left: -20vw;
+    background: transparent url('../img/noise.png') 0 0;
+    background-size: 320px 320px;
+    opacity: .35;
+    animation: noise .5s steps(8,end) infinite both;
+}
+
+/*for animation svg*/
+.letter {
+    opacity: 0;
+}
+.hide {
+    opacity: 0;
+}
+.name {
+    transform: translateY(10px);
+    text-shadow: 0 0 30px rgba(150, 150, 150, 1);
+}
+.logo-animation-block__text {
+    opacity: 0;
+}
+/* end - first block with animation logo */
+
+
+/* start - block with fixed animation*/
+.h-block__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.h-block__content-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 200px 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.mockup-services--2 .h-block__content {
+    transform: translateY(-100vh);
+}
+/*класс добавляет плагин*/
+.scrollmagic-pin-spacer {
+    clip: rect(auto, auto, auto, auto);
+}
+.mockup-services--2 .mockup-services__wrap {
+    transform: translateY(-100vh);
+}
+/*класс добавляет плагин*/
+.scrollmagic-pin-spacer {
+    clip: rect(auto, auto, auto, auto);
+}
+.mockup-services--1 {
+    background-color: map-get($color, theme-violet);
+    height: auto;
+    min-height: 100vh;
+    transition: background-color .2s linear;
+}
+.mockup-services--2 {
+    background-color: map-get($color, theme-green);
+    height: auto;
+    min-height: 100vh;
+    transition: background-color .2s linear;
+}
+.mockup-services__image {
+    width: 45%;
+}
+.mockup-services__content {
+  width: 45%;
+  color: #fff;
+
+  & .btn-wrap {
+    height: 50px;
+    margin-bottom: 0;
+  }
+}
+.mockup-services__content .wrapp {
+    height: 500px;
+}
+.mockup-services__content-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+}
+.mockup-services__content-tag-wrap {
+    display: flex;
+    margin: 20px 0 40px 0;
+}
+.mockup-services__content-tag {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 8px;
+    padding: 4px 10px;
+    margin: 0 10px;
+}
+.mockup-services__content-tag-wrap .mockup-services__content-tag:first-child {
+    margin-left: 0;
+}
+
+.h-block.services-items.all-services {
+    background-color: #fff;
+    padding: 100px 15%;
+}
+.all-services .h-block__title {
+    color: #2d2d2d;
+    margin-bottom: 40px;
+}
+.all-services .block-text {
+    color: #2d2d2d;
+    text-align: center;
+    padding: 0 25%;
+    margin-bottom: 40px;
+}
+/* end - block with fixed animation*/
+.team-structures {
+  display: block;
+  height: auto;
+  padding: 200px 24% 140px;
+  background-color: #b23d46;
+  background-image: url(../img/circules.png);
+  background-repeat: no-repeat;
+  background-position: 350px 250px;
+  position: relative;
+
+  & .icons-wrapp {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  & .icons-block {
+    width: 40%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  & .icon-description {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  & .icon-svg {
+    height: 170px;
+    text-align: center;
+  }
+
+  & .it-company {
+    font-size: 200px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 83%;
+    left: -65px;
+    transform-origin: top left;
+    transform: rotate(270deg);
+    text-shadow: 0px 7px 0px rgba(250, 250, 250, 1),
+    0px 50px 0px rgba(250, 250, 250, .5),
+    0px 100px 0px rgba(250, 250, 250, .4),
+    0px 150px 0px rgba(250, 250, 250, .3),
+    0px 200px 0px rgba(250, 250, 250, .2);
+  }
+}
+
+
+/* start - block Team Structures*/
+
+
+
+/* end - block Team Structures/
+
+
+/* start - block with icons*/
+.services-items {
+    display: block;
+    padding: 200px 15% 140px 15%;
+    height: auto;
+    background-color: #000;
+    transition: background-color .2s linear;
+}
+.h-block__title {
+    width: 100%;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+.h-block__title--black {
+    color: rgb(59, 59, 59);
+}
+.container-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+.development,
+.erp-crm,
+.artificial-intelligence,
+.cyber-security,
+.ui-ux-design,
+.big-data-analaytics,
+.support_24-7 {
+    width: 33%;
+    margin-bottom: 60px;
+    z-index: 1;
+}
+.support_24-7 {
+  margin-bottom: 0;
+  margin-bottom: 60px;
+}
+.services-item__mobile,
+.services-item__center-mobile {
+    width: 33%;
+}
+.services-item__icon {
+    width: 300px;
+    height: 120px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin: 0 auto;
+    opacity: 0;
+}
+.big-data-analaytics .services-item__icon {
+    transition: opacity .2s linear .6s;
+}
+.ui-ux-design .services-item__icon {
+    transition: opacity .2s linear .75s;
+}
+.erp-crm .services-item__icon {
+    transition: opacity .2s linear .9s;
+}
+.support_24-7 .services-item__icon {
+    transition: opacity .2s linear 1.05s;
+}
+.artificial-intelligence .services-item__icon {
+     transition: opacity .2s linear 1.2s;
+}
+.cyber-security .services-item__icon {
+    transition: opacity .2s linear 1.35s;
+}
+.development .services-item__icon {
+    transition: opacity .2s linear 1.5s;
+}
+.services-item__icon svg {
+    width: 300px;
+    height: 120px;
+}
+.services-item__center-mobile {
+    background: url("../img/services_icon/mobile.png") top no-repeat;
+    background-size: contain;
+    transform: scale(0);
+    position: relative;
+    transition: transform .4s ease-in-out;
+}
+.big-data-analaytics,
+.erp-crm {
+    position: relative;
+    transform: translateX(100px);
+}
+.development,
+.artificial-intelligence {
+    position: relative;
+    transform: translateX(-100px);
+}
+.support_24-7 {
+    width: 100%;
+}
+.services-item__title {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .4s linear 1.5s, transform .4s linear 1.5s;
+}
+/*анимация блока услуг*/
+.services-item__center-mobile--visible {
+    transform: scale(2);
+}
+.services-item__icon--visible {
+    opacity: 1;
+}
+.services-item__title--visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+.pulse_1 {
+    animation: pulse 2s infinite;
+    transform: scale(0);
+}
+.pulse_2 {
+    animation: pulse 2s infinite .4s;
+    transform: scale(0);
+}
+.pulse_3 {
+    animation: pulse 2s infinite .8s;
+    transform: scale(0);
+}
+.pulse--animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+}
+.pulse:hover {
+    animation: none;
+}
+
+/*On Hover*/
+.big-data-analaytics__img:hover > .part_1 {
+    transform: rotate(0deg) translate(-13px, -15px);
+    transform-origin: 49% 34%;
+    animation: rotate_1 1s linear infinite;
+}
+
+.big-data-analaytics__img:hover > .part_2 {
+    transform: rotate(360deg) translate(-17px, -15px);
+    transform-origin: 18% 74%;
+    animation: rotate_2 1s linear infinite;
+}
+
+.support:hover .support__phone-svg {
+    transform: rotate(0deg);
+    transform-origin: 50% 40%;
+    animation: phone-svg .2s ease-in-out infinite;
+}
+
+.cyber-security_svg:hover .line-svg {
+    animation: line-svg 1.5s ease-in-out;
+}
+
+.cyber-security_svg:hover .polyline-svg {
+    animation: polyline-svg 1.5s ease-in-out;
+}
+
+.erp-crm_svg:hover .erp-crm_svg-polyline {
+  animation: erp-crm_polyline 1.5s ease-in-out;
+}
+
+/* end - block with icons*/
+
+/* start - Who we are block */
+.who-we-are {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+  &__bg-images {
+     width: 100%;
+     height: 140vh;
+     top: 0;
+     left: 0;
+     position: absolute;
+   }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 100px 25%;
+  }
+}
+
+/* end - Who we are block */
+
+/* start - clients block */
+.clients-block {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+
+  &__content {
+    width: 100%;
+    padding: 200px 15%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  & .parallax-bg {
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: -15%;
+    left: -25%;
+    background-image: url("../img/bg-parallax.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  &__title-part,
+  &__clients-logo {
+    width: 45%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+  }
+  &__clients-logo {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  &__title {
+    font-size: 160px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.2;
+  }
+}
+
+
+.separate-word {
+    display: inline-block;
+    color: transparent;
+    background-color: transparent;
+    padding: 0 20px;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0s linear;
+}
+.separate-word.animation-on-scroll {
+    color: #fff;
+    background-color: #000;
+    transition: background-color .1s linear .6s;
+}
+.clients-logo {
+    width: 45%;
+    padding: 20px 40px;
+}
+/*For animation*/
+.separate-word.animation-on-scroll::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    animation: slide-separate-word 1s ease-in-out forwards;
+}
+
+.clients-block__clients-logo.animation-on-scroll {
+    transition: transform .4s linear;
+    animation: slide-clients-block .5s ease-in-out forwards;
+}
+
+/* Start add style slick-slider */
+.home {
+  & .slick-list {
+    height: 500px;
+  }
+
+  & .slick-track {
+    display: flex;
+    height: 100%;
+  }
+
+  & .slick-slide {
+    margin-right: 10px;
+    background-color: #f3f4f5;
+  }
+
+  & .slick-dotted.slick-slider {
+    margin-bottom: 60px;
+  }
+
+  & .slick-dots {
+    bottom: -35px;
+  }
+
+  & .slick-dots li button:before {
+    font-size: 50px;
+  }
+
+  & .slick-dots {
+    transform: rotate(90deg) translate(-250px, -320px);
+  }
+}
+/* END add style slick-slider */
+.clients-logo figure {
+    display: block;
+    width: 100%;
+    height: 120px;
+    margin: 20px 0 40px 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ferrary-motors .clients-logo__img {
+    background-image: url("../img/clients/ferrari.png");
+}
+.ibm .clients-logo__img {
+    background-image: url("../img/clients/ibm.png");
+}
+.apple .clients-logo__img {
+    background-image: url("../img/clients/apple.png");
+}
+.roadcube .clients-logo__img {
+    background-image: url("../img/clients/roadcube.png");
+}
+.four-four .clients-logo__img {
+    background-image: url("../img/clients/44.png");
+}
+.android .clients-logo__img {
+    background-image: url("../img/clients/android.png");
+}
+.t-mobile .clients-logo__img {
+    background-image: url("../img/clients/T-Mobile.png");
+}
+.investis .clients-logo__img {
+    background-image: url("../img/clients/Investis.png");
+}
+.amazon .clients-logo__img {
+    background-image: url("../img/clients/amazon.png");
+}
+.swedish-railways .clients-logo__img {
+    background-image: url("../img/clients/SJ.png");
+}
+/* end - clients block */
+
+
+/* start - clients block */
+.consultation-block {
+    width: 100%;
+    height: auto;
+    padding: 200px 15%;
+    background-color: #fff;
+    position: relative;
+
+  &__container {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    animation-delay: 1s;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 10px 0;
+
+    &:nth-of-type(2) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__animation-background-items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__animation-background-item {
+    height: 16.67%;
+    width: 100%;
+    background-color: #e2e2e2;
+    opacity: 0;
+
+    &:nth-of-type(1){
+      background-color: #e2e2e2;
+      animation-delay: 0s;
+    }
+    &:nth-of-type(2){
+      background-color: #9a9a9a;
+      animation-delay: .1s;
+    }
+    &:nth-of-type(3){
+      background-color: #7a7a7a;
+      animation-delay: .2s;
+    }
+    &:nth-of-type(4){
+      background-color: #646464;
+      animation-delay: .3s;
+    }
+    &:nth-of-type(5){
+      background-color: #3f3f3f;
+      animation-delay: .4s;
+    }
+    &:nth-of-type(6){
+      background-color: #1c1c1c;
+      animation-delay: .5s;
+    }
+  }
+}
+
+
+
+
+/* end - clients block */
+/*--------------------------------------------------------------
+            # Images parallax component
+--------------------------------------------------------------*/
+.segmenter {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__background,
+  &__pieces,
+  &__piece-wrap,
+  &__piece-parallax,
+  &__piece {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  &__piece-parallax {
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+  }
+  &__pieces {
+    -webkit-perspective: 400px;
+    perspective: 400px;
+  }
+  &__background,
+  &__piece {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__shadow {
+    position: absolute;
+    opacity: 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.7);
+  }
+}
+
+/* Individual shadow styles */
+.demo-5 .segmenter__shadow {
+    box-shadow: 0 18px 29px rgba(4, 19, 22, 0.65);
+}
+/*--------------------------------------------------------------
+            # Set class with Animation
+--------------------------------------------------------------*/
+/* start - set bgColor block */
+.bg_color-fiolet {
+    background-color: #8f53e9;
+    transition: background-color .2s linear;
+}
+.bg_color-fiolet-menu {
+    background-color: rgba(143,83,233,.8);
+    transition: background-color .2s linear;
+}
+.bg_color-green {
+    background-color: #3db259;
+    transition: background-color .2s linear;
+}
+.bg_color-green-menu {
+    background-color: rgba(61,178,89,.8);
+    transition: background-color .2s linear;
+}
+.bg_color-gray {
+    background-color: #2d2d2d;
+    transition: background-color .2s linear;
+}
+.bg_color-black {
+    background-color: #000;
+    transition: background-color .2s linear;
+}
+.bg_color-menu-gray {
+    background-color: rgba(45, 45, 45, 0.8);
+    transition: background-color .2s linear;
+}
+.bg_color-menu-black {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color .2s linear;
+}
+/* end - set bgColor block */

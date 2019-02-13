@@ -1,0 +1,412 @@
+/*--------------------------------------------------------
+*                      ALL PAGE
+*/
+/*Эффект проявления страницы после загрузки*/
+@keyframes set-bg-onload {
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+/*
+*                      END ALL PAGE
+*========================================================*/
+
+
+/*--------------------------------------------------------
+*                         HOME PAGE
+*/
+
+/*стрелка-иконка вниз на первом блоке*/
+@keyframes scrollIcon {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+  }
+  40%, 43% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0) rotate(-45deg);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0) rotate(-45deg);
+  }
+}
+
+/*анимация линий в блоке Consultations*/
+.bg-line {
+  animation-name: bg-line;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes bg-line {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleX(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+}
+
+/*анимация текста и кнопки в блоке Consultations*/
+.fade-in-down {
+  animation-name: fade-in-down;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Effect TV noise*/
+@keyframes noise {
+  0% {
+    transform: translate(0px,0px); }
+  10% {
+    transform: translate(-200px, 200px);
+  }
+  20% {
+    transform: translate(250px, -200px);
+  }
+  30% {
+    transform: translate(-200px,200px);
+  }
+  40% {
+    transform: translate(200px, -250px);
+  }
+  50% {
+    transform: translate(-200px, 300px);
+  }
+  60% {
+    transform: translate(-300px, -200px);
+  }
+  70% {
+    transform: translate(150px, 200px);
+  }
+  80% {
+    transform: translate(200px, -250px);
+  }
+  90% {
+    transform: translate(100px, 300px);
+  }
+  100% {
+    transform: translate(-200px, 200px);
+  }
+}
+/* pulse on mobile phone*/
+@keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 150px rgba(255, 255, 255, 0);
+  }
+}
+/*animation svg-icon on SERVICES block*/
+@keyframes rotate_1 {
+  100% {
+    transform: rotate(360deg) translate(-13px, -15px);
+    transform-origin: 49% 34%;
+  }
+}
+@keyframes rotate_2 {
+  100% {
+    transform: rotate(0deg) translate(-17px, -15px);
+    transform-origin: 18% 74%;
+  }
+}
+@keyframes phone-svg {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 50% 40%;
+  }
+  25% {
+    transform: rotate(10deg);
+    transform-origin: 50% 40%;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: 50% 40%;
+  }
+  75% {
+    transform: rotate(-10deg);
+    transform-origin: 50% 40%;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 40%;
+  }
+}
+
+@keyframes line-svg {
+  0% {
+    stroke-dashoffset: 120;
+    stroke-dasharray: 120;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 120;
+
+  }
+}
+
+@keyframes polyline-svg {
+  0% {
+    stroke-dashoffset: 220;
+    stroke-dasharray: 220;
+  }
+  100% {
+    stroke-dashoffset: 606;
+    stroke-dasharray: 280;
+  }
+}
+@keyframes erp-crm_polyline {
+  0% {
+    stroke-dashoffset: 410;
+    stroke-dasharray: 420;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 420;
+  }
+}
+
+/*Who we trust? nobody*/
+@keyframes slide-separate-word {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-clients-block {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*
+*                      HOME PAGE
+*========================================================*/
+
+
+
+/*--------------------------------------------------------
+*                      blog page
+*/
+@keyframes showArticle {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/*
+*                      blog page
+*========================================================*/
+
+
+
+/*--------------------------------------------------------
+*                      company page
+*/
+//glitch
+@keyframes noise-anim {
+  0% {
+    clip: rect(88px, 9999px, 140px, 0);
+  }
+  5% {
+    clip: rect(11px, 9999px, 57px, 0);
+  }
+  10% {
+    clip: rect(97px, 9999px, 61px, 0);
+  }
+  15% {
+    clip: rect(80px, 9999px, 43px, 0);
+  }
+  20% {
+    clip: rect(66px, 9999px, 69px, 0);
+  }
+  25% {
+    clip: rect(55px, 9999px, 99px, 0);
+  }
+  30% {
+    clip: rect(39px, 9999px, 5px, 0);
+  }
+  35% {
+    clip: rect(120px, 9999px, 141px, 0);
+  }
+  40% {
+    clip: rect(100px, 9999px, 1px, 0);
+  }
+  45% {
+    clip: rect(46px, 9999px, 123px, 0);
+  }
+  50% {
+    clip: rect(112px, 9999px, 42px, 0);
+  }
+  55% {
+    clip: rect(111px, 9999px, 43px, 0);
+  }
+  60% {
+    clip: rect(77px, 9999px, 92px, 0);
+  }
+  65% {
+    clip: rect(48px, 9999px, 139px, 0);
+  }
+  70% {
+    clip: rect(68px, 9999px, 93px, 0);
+  }
+  75% {
+    clip: rect(94px, 9999px, 61px, 0);
+  }
+  80% {
+    clip: rect(64px, 9999px, 24px, 0);
+  }
+  85% {
+    clip: rect(92px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(126px, 9999px, 35px, 0);
+  }
+  95% {
+    clip: rect(59px, 9999px, 125px, 0);
+  }
+  100% {
+    clip: rect(120px, 9999px, 73px, 0);
+  }
+}
+
+//glitch
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(88px, 9999px, 140px, 0);
+  }
+  5% {
+    clip: rect(11px, 9999px, 57px, 0);
+  }
+  10% {
+    clip: rect(97px, 9999px, 61px, 0);
+  }
+  15% {
+    clip: rect(80px, 9999px, 43px, 0);
+  }
+  20% {
+    clip: rect(66px, 9999px, 69px, 0);
+  }
+  25% {
+    clip: rect(55px, 9999px, 99px, 0);
+  }
+  30% {
+    clip: rect(39px, 9999px, 5px, 0);
+  }
+  35% {
+    clip: rect(120px, 9999px, 141px, 0);
+  }
+  40% {
+    clip: rect(100px, 9999px, 1px, 0);
+  }
+  45% {
+    clip: rect(46px, 9999px, 123px, 0);
+  }
+  50% {
+    clip: rect(112px, 9999px, 42px, 0);
+  }
+  55% {
+    clip: rect(111px, 9999px, 43px, 0);
+  }
+  60% {
+    clip: rect(77px, 9999px, 92px, 0);
+  }
+  65% {
+    clip: rect(48px, 9999px, 139px, 0);
+  }
+  70% {
+    clip: rect(68px, 9999px, 93px, 0);
+  }
+  75% {
+    clip: rect(94px, 9999px, 61px, 0);
+  }
+  80% {
+    clip: rect(64px, 9999px, 24px, 0);
+  }
+  85% {
+    clip: rect(92px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(126px, 9999px, 35px, 0);
+  }
+  95% {
+    clip: rect(59px, 9999px, 125px, 0);
+  }
+  100% {
+    clip: rect(120px, 9999px, 73px, 0);
+  }
+}
+
+//мигающие надписи ZEus в начале страницы
+@keyframes fade-like-star {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+/*
+*                      company page
+*========================================================*/
+
+
+/*--------------------------------------------------------
+*                      contact page
+*/
+//анимация лейблов
+@keyframes spring-label {
+  0% { transform: translateY( 0 ); }
+  30% { transform: translateY( 5px ); }
+  70% { transform: translateY( -25px ); }
+  100% { transform: translateY( -20px ); }
+}
+
+@keyframes spring-label-back {
+  0% { transform: translateY( -20px ); }
+  30% { transform: translateY( -25px ); }
+  70% { transform: translateY( 5px ); }
+  100% { transform: translateY( 0 ); }
+}
+
+
+/*
+*                      contact page
+*========================================================*/

@@ -1,0 +1,22 @@
+@import "../libs/normalize/_normalize.scss";
+@import "libs";
+@import "font";
+@import "vars";
+@import "component";
+@import "base";
+
+
+@import "top-menu";
+@import "footer";
+@import "home";
+@import "services";
+@import "case";
+@import "company";
+@import "contact";
+@import "blog";
+@import "blog-category";
+@import "blog-post";
+@import "animations";
+
+
+@import "media"; /*Всегда в конце*/

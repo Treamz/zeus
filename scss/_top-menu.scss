@@ -1,0 +1,143 @@
+.top-menu {
+  width: 100%;
+  height: 60px;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: background-color .2s linear;
+}
+.blog .top-menu {
+  background-color: #000;
+}
+.logo {
+  width: 100px;
+  height: 40px;
+  background: url('../img/logo_black.png') center no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.logo-link  {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.top-menu__items {
+  transition: transform .5s ease-in-out;
+}
+.top-menu__item {
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(250,250,250,.7);
+  margin-left: 60px;
+  position: relative;
+  letter-spacing: 1px;
+}
+.top-menu__item::after {
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(5px) translateY(-5px);
+  transition: all .2s ease-in;
+}
+.top-menu__item:nth-of-type(1)::after {
+  content: 'home';
+}
+.top-menu__item:nth-of-type(2)::after {
+  content: 'SERVICES';
+}
+.top-menu__item:nth-of-type(3)::after {
+  content: 'CASE STUDIES';
+}
+.top-menu__item:nth-of-type(4)::after {
+  content: 'BLOG';
+}
+.top-menu__item:nth-of-type(5)::after {
+  content: 'COMPANY';
+}
+.top-menu__item:nth-of-type(6)::after {
+  content: 'CONTACT';
+}
+.top-menu__item:hover::after {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+.top-menu__item.top-menu__item--active {
+  color: #fff;
+}
+.top-menu__item.top-menu__item--active::after {
+  display: none;
+}
+.burger .top-menu__items {
+  background-color: #343434;
+  top: 0;
+  transition: top .4s ease-in-out;
+}
+.burger .top-menu__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+.burger .top-menu__item:nth-of-type(1) {
+  transition: transform .4s ease-in-out .4s, opacity .4s ease-in-out .4s;
+}
+.burger .top-menu__item:nth-of-type(2) {
+  transition: transform .4s ease-in-out .5s, opacity .4s ease-in-out .5s;
+}
+.burger .top-menu__item:nth-of-type(3) {
+  transition: transform .4s ease-in-out .6s, opacity .4s ease-in-out .6s;
+}
+.burger .top-menu__item:nth-of-type(4) {
+  transition: transform .4s ease-in-out .7s, opacity .4s ease-in-out .7s;
+}
+.burger .top-menu__item:nth-of-type(5) {
+  transition: transform .4s ease-in-out .8s, opacity .4s ease-in-out .8s;
+}
+.burger .top-menu__item:nth-of-type(6) {
+  transition: transform .4s ease-in-out .8s, opacity .4s ease-in-out .9s;
+}
+/*burger*/
+.menu-icon {
+  display: none;
+}
+.menu-icon {
+  margin-top: 15px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.menu-icon__line {
+  height: 2px;
+  width: 30px;
+  display: block;
+  background-color: #fff;
+  margin-bottom: 4px;
+  transition: transform .2s ease;
+}
+.menu-icon__line-left {
+  width: 15px;
+}
+.menu-icon__line-right {
+  width: 15px;
+  float: right;
+}
+.burger .menu-icon__line {
+  transform: rotate(-45deg);
+}
+.burger .menu-icon__line-left {
+  transform: rotate(45deg) translateY(-1px) translateX(2px);
+}
+.burger .menu-icon__line-right {
+  transform: rotate(45deg) translateY(1px) translateX(-2px);
+}

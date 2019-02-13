@@ -1,0 +1,95 @@
+/*для эфекта при нажатии на кнопки*/
+:root {
+  --color-ripple: rgba(255, 255, 255, 0.8);
+}
+
+/*buttons*/
+.btn-wrap {
+  width: 100%;
+  margin: 40px 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.btn-wrap.left {
+  text-align: left;
+}
+.btn-link {
+  position: relative;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+}
+.btn-purple {
+  background-color: map-get($color, theme-violet);
+  box-shadow: 0 4px 10px 0 rgba(143, 83, 233, 0.6);
+  transition: box-shadow .2s linear, transform .2s linear;
+}
+.btn-green {
+  background-color: map-get($color, theme-green);
+  box-shadow: 0 4px 10px 0 rgba(61, 178, 89, 0.6);
+  transition: box-shadow .2s linear, transform .2s linear;
+}
+.btn-transparent {
+  background-color: transparent;
+  border: 2px solid transparent;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.6), inset 0 2px 8px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 0;
+  transition: box-shadow .2s linear, transform .2s linear, text-shadow .2s linear;
+}
+.border-white {
+  border: 2px solid #fff;
+}
+.btn-purple:hover,
+.btn-green:hover,
+.btn-transparent:hover {
+  box-shadow: none;
+  text-shadow: none;
+  transform: translateY(2px);
+}
+
+a.link {
+  transition: color .3s linear;
+}
+a.link:hover {
+  color: map-get($color, theme-violet);
+  text-decoration: underline;
+}
+
+/*кружок вместо мышки на странице кейсов*/
+.pointer {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 128, 255);
+  border: 1px solid map-get($color, theme-violet);
+  mix-blend-mode: difference;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 9999999;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/*текстовые блоки*/
+.block-description {
+  width: 100%;
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  margin-bottom: 40px;
+}
+
+.block-text {
+  width: 100%;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,233 @@
+/*Start Title*/
+.contact .wrapper {
+    background-color: #fff;
+}
+.contact-title {
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(25, 25, 25);
+    text-transform: uppercase;
+    line-height: 1.2;
+    width: 100%;
+    padding: 185px 30%;
+    position: relative;
+    margin: 0;
+    z-index: 1;
+}
+.contact-title::after {
+    content: 'contact';
+    display: block;
+    width: auto;
+    height: 100%;
+    font-size: 170px;
+    /*color: rgb(239, 239, 239);*/
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 180px;
+    left: 16vw;
+    z-index: -1;
+    text-shadow: 0 2px 35px rgba(150, 150, 150, .4);
+}
+
+/*START Contact form*/
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30% 150px 30%;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #fff 90%, #d7d7d7);
+}
+
+.input-field {
+    width: 40%;
+    position: relative;
+    margin-bottom: 40px;
+}
+.textarea-field {
+    width: 100%;
+    position: relative;
+}
+
+.contact__input {
+    width: 100%;
+    cursor: text;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #9c9c9c;
+    outline: none;
+    font-size: 16px;
+    color: #2d2d2d;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.select {
+    opacity: 0;
+    position: absolute;
+}
+.fake-select {
+    position: absolute;
+    top: 25px;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.15);
+    pointer-events: none;
+    opacity: 0;
+}
+.fake-select--active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fake-select__option {
+    padding: 2px 0;
+    padding-left: 10px;
+    transition: background-color .3s linear;
+}
+.fake-select__option:hover {
+    background-color: #e9ddfb;
+}
+.select-result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    z-index: 1;
+    color: #2d2d2d;
+}
+
+.label {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    cursor: text;
+    font-size: 16px;
+    color: #9c9c9c;
+    line-height: 1.2;
+}
+.select-field {
+    height: 24px;
+    width: 40%;
+    cursor: text;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #9c9c9c;
+    outline: none;
+    font-size: 16px;
+    color: #9c9c9c;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+}
+.select-field::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 5px solid #2d2d2d;
+    border-left: 5px solid #2d2d2d;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.label-select {
+    z-index: 2;
+}
+
+/*Start textarea*/
+#message {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #2d2d2d;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #9c9c9c;
+    outline: none;
+    resize: none;
+    font-family: Roboto, sans-serif;
+}
+.textarea-field {
+    margin-bottom: 80px;
+}
+/*End textarea*/
+
+.label-up-static ~ .label {
+    transform: translateY( -20px )
+}
+#message:focus,
+.label-up:focus,
+.select-field--bottom-border {
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.label-up:focus ~ .label,
+.label-select-up {
+    animation: spring-label .4s ease forwards;
+}
+
+.label-down:not(:focus) ~ .label,
+.label-select-down {
+    animation: spring-label-back .4s ease forwards;
+}
+
+.confirmation-privacy-policy {
+    font-size: 12px;
+    color: #2d2d2d;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+}
+
+.contact  button.btn-link {
+    border: none;
+    outline: none;
+}
+/*END Contact form*/
+
+/*START More info block*/
+.more-info {
+    padding: 100px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.more-info__title {
+    width: 100%;
+    font-size: 60px;
+    color: rgb(25, 25, 25);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+.more-info__california {
+    width: 30%;
+    font-size: 18px;
+    color: rgb(45, 45, 45);
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 100px;
+}
+.more-info__california .wrap {
+    display: inline-block;
+    text-align: left;
+}
+
+/*END More info block*/
